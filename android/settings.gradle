@@ -1,0 +1,3 @@
+rootProject.name = 'GPS_LIVE'
+
+include ':app'

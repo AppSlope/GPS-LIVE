@@ -1,23 +1,23 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import {Router} from 'react-native-router-flux'
-import {Text} from 'react-native'
+import React from "react";
+import PropTypes from "prop-types";
 
 // TODO: scence or navigation
-import {Provider} from 'react-redux'
+import { Provider } from "react-redux";
+import { Router } from "react-native-router-flux";
+import scenes from "../components/scene";
 
 class AppContainer extends React.Component {
-    static propTypes = {
-        store: PropTypes.object.isRequired
-    }
+  static propTypes = {
+    store: PropTypes.object.isRequired
+  };
 
-    render(){
-        return(
-            <Provider store = {this.props.store} >
-                <Text> Hello AppContainer PP </Text>
-            </Provider>
-        )
-    }
+  render() {
+    return (
+      <Provider store={this.props.store}>
+        <Router scenes={scenes} />
+      </Provider>
+    );
+  }
 }
 
-export default AppContainer
+export default AppContainer;

@@ -1,8 +1,8 @@
-import {combineReducers} from 'redux'
-import {HomeReducer as Home} from './HomeReducer'
+import { combineReducers } from "redux";
+import { HomeReducer as Home } from "../components/Home/modules/homeReducer";
 
-export const rootReducer = () => {
-    return combineReducers({Home})
-}
+const rootReducer = () => {
+  return combineReducers({ Home });
+};
 
-export default rootReducer
+export default rootReducer;
